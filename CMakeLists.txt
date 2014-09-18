@@ -4,7 +4,8 @@ include(${CMAKE_HOME_DIRECTORY}/biicode.cmake)
 INIT_BIICODE_BLOCK()
 
 # Create config.h
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config.h.in ${CMAKE_CURRENT_BINARY_DIR}/config.h)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config.h.in ${CMAKE_CURRENT_SOURCE_DIR}/config.h)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/snappy-stubs-public.h.in ${CMAKE_CURRENT_SOURCE_DIR}/snappy-stubs-public.h)
 
 # Add targets for the snappy library
 add_library( snappy STATIC snappy.cc snappy-sinksource.cc snappy-stubs-internal.cc )
